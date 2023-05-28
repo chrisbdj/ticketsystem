@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Billing/Ticket System</title> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <div id="sidenavbar">
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <a href="index.html" >
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </li>
+        <li>
+          <a href="support.html">
+            <i class="fas fa-envelope-open-text"></i>
+          </a>
+        </li>
+        <li>
+          <a href="billing.html">
+            <i class="fas fa-file-invoice"></i>
+          </a>       
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="site-content">
+
+    <div id="topnavbar">
+      <div class="page-header"><h1>Add Order</h1></div>
+      
+    </div>
+
+    
+  
+    <hr><div class="spacer"></div>
+    <main>
+      <div class="large-content">
+        <h2>Add Website:</h2>
+      </div>
+
+      <div class="content-block">
+        <form action="/dostuff.php">
+          <label for="fname">Website URL:</label><br>
+          <div class="input-container">
+            <input type="text" id="name" value="Name" name="name" class="fill input">
+          </div>
+          <div class="spacer"></div>
+          <div class="general-container flex flex-col align-center text-center">
+          <h4>Change Package</h4>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique nunc rhoncus lobortis adipiscing. Eu dictum massa sed eleifend viverra nec lacus.</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="3" value="2" class="slider" id="myRange">
+          </div>
+          <div class="spacer"></div>
+          <button>Change Package</button>
+        </div>
+          
+
+        </form> 
+      </div>
+    
+    </main>
+  </div>
+	<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  <script src="https://kit.fontawesome.com/fb36d83fe9.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+label {
+	font-family: Archivo;
+	font-style: normal;
+	font-weight: 500;
+	font-size:1em;
+	color: #DDDEDF;
+}
+textarea {
+	background:none;
+	border:none;
+	resize:none;
+	width:100%;
+	
+	font-family: Archivo;
+	font-weight: normal;
+	font-size: 1rem;
+	line-height:100%;
+	padding:1em;
+	color: rgba(221,222,223, 0.25);
+}
+input[type=text],input[type=email],input[type=password],input[type=range] {
+	background: #191F27;
+	border: 1px solid #7DB1C9;
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: rgb(221,222,223);
+	min-height: 1.8em;
+
+	padding:0.15em 0.5em;
+}
+.fadedout{
+	color: rgba(221,222,223, 0.25);
+}
+.fadedout:focus{
+	color: rgb(221,222,223);
+}
+
+button {
+	background: #191F27;
+	border: 1px solid #7DB1C9;
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: #11B566;
+	padding:0.5em 1.25em;
+}
+select {
+	width:20%;
+	background: #191F27;
+	border: 1px solid #7DB1C9;
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: #DDDEDF;
+	min-height: 1.6em;
+	padding:0.15em 0.5em;
+	margin-left:0.25em;
+	-webkit-appearance: none;
+}
+
+.search-container input[type=text] {	
+  	font-family: Archivo;
+	font-style: normal;
+	font-size:1.1em;
+	color: rgba(221,222,223, 0.25);
+	min-height: 1.6em;
+	padding:0.15em 0.5em;
+}
+.search-container input[type=text] {
+	color: rgba(221,222,223);
+}
+.search-container button { 
+  padding:0.15em 0.5em;  
+  border: 1px solid #7DB1C9;
+  font-size:1.1em;
+  min-height: 1.6em;
+}
+
+.search-container button:hover {
+  background: #DDDEDF;
+}
+
+.slidecontainer {
+  width: 75%;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-color:2A3944;
+  border-radius: 5px;
+  background: #191F27;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	border:none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #7DB1C9;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #7DB1C9;
+  cursor: pointer;
+  border:none;
+}
+
+.input-container{
+	width:100%;
+	display:flex;
+	align-items: center;
+	margin-bottom:1em;
+}
+.input-container i {
+	color:#DDDEDF;
+	font-size:1em;
+	margin-left:0.5em;
+}

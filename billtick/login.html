@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Billing/Ticket System</title> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <div id="sidenavbar">
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <a class="active">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a>
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </li>
+        <li>
+          <a>
+            <i class="fas fa-envelope-open-text"></i>
+          </a>
+        </li>
+        <li>
+          <a>
+            <i class="fas fa-file-invoice"></i>
+          </a>       
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div id="site-content">
+    <div id="topnavbar">
+      <div class="page-header"><h1>Home</h1></div>
+      
+    </div>
+
+    
+    <hr><div class="spacer"></div>
+	  <main>
+		  <div class="large-content">
+      <div class="center-block">
+      	<form id = "login" action="api.php" method="post" >
+    	<input type="hidden" name="act" value="auth">
+          <label for="email">Email:</label><br>
+          <div class="input-container">
+            <input type="text" id="email" name="email" class="fill input fadedout" placeholder="Email Address">
+          </div>
+			<label for="password">Password:</label><br>
+          <div class="input-container">
+            <input type="password" id="name" name="pass" class="fill input fadedout" placeholder="Password">
+          </div>
+			<button type="submit">Log In</button>
+			
+		 </form>
+		  <a href='passwordchange.php'>Forgot Password</a> 
+      </div>
+		  </div>
+    
+  </main>
+	  <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+  <script src="login.js"></script>
+  <script src="https://kit.fontawesome.com/fb36d83fe9.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Billing/Ticket System</title> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <div id="sidenavbar">
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <a href="index.html" >
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </li>
+        <li>
+          <a href="support.html">
+            <i class="fas fa-envelope-open-text"></i>
+          </a>
+        </li>
+        <li>
+          <a href="billing.html">
+            <i class="fas fa-file-invoice"></i>
+          </a>       
+        </li>
+      </ul>
+    </nav>
+  </div>
+ 
+  <div id="site-content">
+
+    <div id="topnavbar">
+      <div class="page-header"><h1>Add Client</h1></div>
+     
+    </div>
+
+    
+  
+    <hr><div class="spacer"></div>
+    <main>
+      <div class="large-content">
+        <h2>User Info:</h2>
+      </div>
+      <form id = "adduser" action="api.php" method="post">
+        <input type="hidden" name="act" value="adduser">
+        <label for='name'>Name:</label><br>
+        <div class='input-container'>
+            <input type='text' id='name' name='name' class='fill input'>
+        </div>
+
+        <label for='email'>Email:</label><br>
+        <div class='input-container'>
+            <input type='text' id='email' name='email' class='fill input'>
+        </div>
+
+        <label for='pass'>Password:</label><br>
+        <div class='input-container'>
+            <input type='text' id='pass' name='pass' class='fill input'>
+        </div>
+
+        <label for='address'>Address</label><br>
+        <div class='input-container'>
+            <input type='text' id='address' name='address' class='fill input'>
+        </div>
+
+        <label for='city'>City & Province</label><br>
+        <div class='input-container'>
+            <input type='text' id='city' name='city' class='fill input'>
+            <select name='province' id='province' >
+                <option value='ab'>AB</option>
+                <option value='bc'>BC</option>
+            </select>
+            
+        </div>
+
+        <label for='postal'>Postal Code:</label><br>
+        <div class='input-container'>
+            <input type='text' id='postal' name='postal' class='fill input'>
+        </div>
+
+        <label for='phone'>Phone Number:</label><br>
+        <div class='input-container'>
+            <input type='text' id='phone' name='phone' class='fill input'>
+        </div>
+        <button type="submit">Submit</button>
+    </form> 
+      </div>
+     
+          
+       
+    </main>
+  </div>
+<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  <script src="adduser.js"></script>
+  <script src="https://kit.fontawesome.com/fb36d83fe9.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Billing/Ticket System</title> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <div id="sidenavbar">
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </li>
+        <li>
+          <a href="support.html" class="active">
+            <i class="fas fa-envelope-open-text"></i>
+          </a>
+        </li>
+        <li>
+          <a href="billing.html">
+            <i class="fas fa-file-invoice"></i>
+          </a>       
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<div id="site-content">
+
+    <div id="topnavbar">
+      <div class="page-header"><h1>Support</h1></div>
+      <div class="topnav">
+        <ul>
+          
+        </ul>
+      </div>
+    </div>
+
+    <hr><div class="spacer"></div>
+    <main>
+		
+    <div class="large-content">
+		<h2>Ticket #<span id="ticketnumber">1222</span></h2>
+		Date Created: <span id="creationdate">3/22/2021</span>
+		<div class="spacer"></div>
+      <h3 id="ticketsubject">Add Image to home page</h3>
+		<div class="spacer"></div>
+		
+		<div id="responder" class="flex flex-col">
+			<form id ="submitticket" class="openticket">
+                <input type="hidden" name="act" value="submit">
+				<input type="hidden" id="ticket" name="ticket" value="">
+                <label for="cc">CC:</label><br>
+                <div class="input-container">
+                    <input type="text" id="cc" name="cc" class="fill input">
+                </div> 
+                <label for="subject" class="jshide">Subject:</label><br>
+                <div class="input-container jshide">
+                    <input type="text" id="inputsubject" name="subject" class="fill input">
+                </div>
+                <div class="general-color-container">
+                    <textarea name="msg"></textarea>
+                </div>
+                <div class="spacer"></div>
+                <button type="submit" style="align-self:end;">Post</button>
+            </form>
+			
+			<div class="spacer"></div>
+				<hr class="full-width">
+			<div class="spacer"></div>
+		</div>
+		
+		
+    </div>
+  </main>
+<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  <script src="openticket.js"></script>
+  <script src="https://kit.fontawesome.com/fb36d83fe9.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

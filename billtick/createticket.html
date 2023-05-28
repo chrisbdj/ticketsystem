@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Billing/Ticket System</title> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+  <div id="sidenavbar">
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </li>
+        <li>
+          <a href="support.html" class="active">
+            <i class="fas fa-envelope-open-text"></i>
+          </a>
+        </li>
+        <li>
+          <a href="billing.html">
+            <i class="fas fa-file-invoice"></i>
+          </a>       
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<div id="site-content">
+
+    <div id="topnavbar">
+      <div class="page-header"><h1>Support</h1></div>
+      <div class="topnav">
+        <ul>
+          <li class="nav-item">
+            <a href="">open a ticket?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr><div class="spacer"></div>
+    <main>
+		
+    <div class="large-content">
+		<h2>Ticket #<span id="ticketnumber">1222</span></h2>
+		<div class="spacer margin2"></div>
+		
+		<div class="flex flex-col">
+            <form id ="createticket" class="openticket">
+                <input type="hidden" name="act" value="submit">
+                <label for="cc">CC:</label><br>
+                <div class="input-container">
+                    <input type="text" id="cc" name="cc" class="fill input">
+                </div> 
+                <label for="subject">Subject:</label><br>
+                <div class="input-container">
+                    <input type="text" name="subject" class="fill input">
+                </div>
+                <div class="general-color-container">
+                    <textarea name="msg"></textarea>
+                </div>
+                <div class="spacer"></div>
+                <button type="submit" style="align-self:end;">Post</button>
+            </form>
+		</div>
+    </div>
+  </main>
+<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+  <script src="createticket.js"></script>
+  <script src="https://kit.fontawesome.com/fb36d83fe9.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

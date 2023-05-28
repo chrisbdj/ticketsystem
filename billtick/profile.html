@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Billing/Ticket System</title>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width,initial-scale=1' />
+    <meta name='description' content='' />
+    <link rel='stylesheet' type='text/css' href='style.css' />
+</head>
+
+<body>
+
+    <div id='sidenavbar'>
+        <nav class='sidebar'>
+            <ul>
+                <li>
+                    <a href='index.html'>
+                        <i class='fas fa-home'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href='profile.html' class='active'>
+                        <i class='fas fa-user-circle'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href='support.html'>
+                        <i class='fas fa-envelope-open-text'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href='billing.html'>
+                        <i class='fas fa-file-invoice'></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id='site-content'>
+
+        <div id='topnavbar'>
+            <div class='page-header'>
+                <h1>Profile</h1>
+            </div>
+            <div class='topnav'>
+                <ul>
+                    <li class='nav-item'>
+                        <a id='editBtn'>edit<span
+                                class='hideTAB'>&nbsp;details</span>?</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href='support.html'><span class='hideTAB'>view</span> tickets?</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href=''><span class='hideTAB'>view</span> invoices?</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <hr>
+        <div class='spacer'></div>
+        <main>
+            <div class='large-content'>
+                <h2>About Me</h2>
+            </div>
+
+            <div id="aboutme" class='content-block'>
+                <form id = "profiledata" action="api.php" method="post">
+                    <input type="hidden" name="act" value="change">
+                    <input type="hidden" id= "id" name="id" value="">
+                    <label for='name'>Name:</label><br>
+                    <div class='input-container'>
+                        <input type='text' id='name' name='name' class='fill input' disabled><i
+                            class='fas fa-lock'></i>
+                    </div>
+
+                    <label for='email'>Email:</label><br>
+                    <div class='input-container'>
+                        <input type='text' id='email' name='email' class='fill input' disabled><i
+                            class='fas fa-lock'></i>
+                    </div>
+
+                    <label for='address'>Address</label><br>
+                    <div class='input-container'>
+                        <input type='text' id='address' name='address' class='fill input' disabled><i
+                            class='fas fa-lock'></i>
+                    </div>
+
+                    <label for='city'>City & Province</label><br>
+                    <div class='input-container'>
+                        <input type='text' id='city' name='city' class='fill input' disabled>
+                        <select name='province' id='province' disabled>
+                            <option value='ab'>AB</option>
+                            <option value='bc'>BC</option>
+                        </select>
+                        <i class='fas fa-lock'></i>
+                    </div>
+
+                    <label for='postal'>Postal Code:</label><br>
+                    <div class='input-container'>
+                        <input type='text' id='postal' name='postal' class='fill input' disabled><i
+                            class='fas fa-lock'></i>
+                    </div>
+
+                    <label for='phone'>Phone Number:</label><br>
+                    <div class='input-container'>
+                        <input type='text' id='phone' name='phone' class='fill input' disabled><i
+                            class='fas fa-lock'></i>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </main>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'
+        integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous'></script>
+    <script src='https://kit.fontawesome.com/fb36d83fe9.js' crossorigin='anonymous'></script>
+    <script src='scripts.js'></script>
+    <script src='profile.js'></script>
+    
+</body>
+
+</html>

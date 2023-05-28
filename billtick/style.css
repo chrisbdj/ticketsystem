@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap');
+
+@import "functional.css"; /* generic useful classes used in html for simplicity */
+
+@import "components.css"; /*import skins for all input items/components*/
+
+:root {
+	height:100%;
+	background: #191F27;
+
+	color: #DDDEDF;
+
+	font-family: 'Archivo', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height:100%;
+	font-size:12pt;
+}
+* { /* 0 all margin and padding*/
+	margin:0;
+	padding:0;
+}
+* a {
+    all: unset;
+}
+
+/*TEXT SKINS*/
+hr {
+	border:none;
+  background-color:#7DB1C9;
+	height:2px;
+  width:90%;
+  margin:0 auto;
+}
+
+h1 {
+	font-weight: bold;
+	font-size:3.5rem;
+	line-height:93%;
+
+	color: #7DB1C9;
+}
+h2 {
+
+	font-weight: bold;
+	font-size: 2.5rem;
+	line-height: 100%;
+
+	letter-spacing: 2px;
+	color:#DDDEDF;
+}
+h3 {
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 100%;
+
+	color:#DDDEDF;
+}
+h4 {
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 100%;
+	color:#DDDEDF;
+}
+p {
+	font-weight: normal;
+	font-size: 1rem;
+	line-height:100%;
+
+	padding:1em;
+	color: #DDDEDF;
+}
+
+/* MAIN SITE CONTENT & LAYOUT HANDLING */
+#site-content {
+	
+	margin:1em auto;
+}
+main { /* SETS STAGE FOR MAIN CONTENT AREA!!!*/
+	width:90%;
+	margin:0 auto;
+}
+.large-content { /*LARGE CONTENT/ FULL WIDTH!!*/
+	grid-column:1 / span 2;
+}
+.content-block { /*NORMAL 2 WIDE LAYOUT CONTENT BLOCK*/
+	margin-top:1rem;
+}
+.center-block {
+	margin-top:1rem;
+	margin: auto;
+	width: 100%;
+}
+
+.ticket-search-form { /*header for Tickets that also includes search button*/
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between;
+}
+
+.general-table {
+    margin:2em 0;
+}
+
+.general-table .header {
+	text-align:left;
+}
+.general-table .subject {
+	background-color:#2A3944;
+	padding:0.5em 0.75em;
+	margin:0.1em 0;
+	text-align:center;
+	text-align:left;
+}
+.general-table .item {
+	background-color:#2A3944;
+	
+	padding:0.5em 0.75em;
+	margin:0.1em 0;
+}
+
+.general-container {
+	width:100%;
+	color:#DDDEDF;
+}
+
+/*TICKET CONTAINER STYLING*/
+.general-color-container {
+	width:100%;
+	background-color:#2A3944;
+	color:#DDDEDF;
+}
+.message-table {
+      display:grid;
+      grid-template-columns:80% 20%;
+      grid-template-rows: 2;
+    }
+    .poster-col {
+      grid-column:1;
+    }
+    .date-col {
+      grid-column:2;
+      text-align:right;
+    }
+    .message-col {
+      grid-column:1 / span 2;
+    }
+    .message-col p {
+      padding:1em;
+    }
+
+
+.hidePHONE { /*HIDE ON PHONE MODE*/
+	display:none;
+}
+.hideTAB { /*HIDE ON TABLET VIEW ONLY*/
+	display:inline-block;
+}
+
+
+/* SVG STYLES */
+.home-icon {
+	width:35%;
+	transform:rotate(90deg);
+}
+.support-icon {
+	width:37px; 
+	height:42px;
+}
+.lock-icon {
+
+}
+
+/* Built Mobile FIRST, ITS A TOP NAV BAR UNTIL 725px roughly */
+/* sidebar code */
+#sidenavbar {
+	height: 75px;
+	width: 100%;
+	background-color: #2A3944;
+	z-index: 100;
+}
+.sidebar {
+	height:100%;
+	width:100%;
+}
+.sidebar ul {
+	list-style-type: none;
+	height:100%;
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
+	align-content:center;
+}
+.sidebar ul li {
+	padding:0 2rem 0 2rem; /* space between items L/R mobile view*/
+}
+.sidebar ul li a {
+  text-decoration: none;
+
+  font-size: 2.25rem;
+  color: #7DB1C9;
+}
+.sidebar ul li a:hover { /*hover state change for side nav */
+  color: #7DB1C9;
+  opacity:0.75;
+}
+.sidebar .active { /* current page state for side bar */
+	 color: #7DB1C9;
+	 opacity:0.25;
+}
+
+/* top navbar code - The one to the right of the page head and the page head itself is here */
+#topnavbar {
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.page-header{
+	padding:0 1.5rem;/*padding to create space between edge of page and navbar*/
+	align-self:flex-end; /*aligns page header to bottom of stacked nav list on mobile view*/
+}
+.topnav{
+	width:100%;
+	align-self:flex-end;
+	margin-right:1rem;
+}
+.topnav ul {
+	list-style-type: none;
+	display:flex;
+	flex-direction: column;
+	align-items:flex-end;
+}
+.topnav ul li {
+	padding:0.3rem 0 0.3rem 0;/*vertical stack topnav padding between items*/
+}
+.topnav ul li a {
+	text-decoration: none;
+	color:#11B566;
+	
+	line-height:100%;
+	font-style: normal;
+	font-weight: 500;
+	font-size:1rem;
+	letter-spacing: 0.1em;
+	vertical-align:bottom;
+}
+.topnav ul li a:hover{
+	color:#11B566;
+	color:#DDDEDF;
+}
+
+
+/* Media Quieries */
+@media only screen and (min-width: 767px) {
+	
+
+	/*content / layout adjustments in tablet and above view */
+	#site-content {
+		width:calc(100vw - 75px); /*minus 75px to accomodate the sidebar*/
+		margin-left:75px;/*left shift for sidebar*/
+	}
+	main {/*half the content blocks size for 2 column layout on tablet and above*/
+		display:grid;
+		grid-template-columns: repeat(2, 1fr);/*half the content blocks size for 2 column layout on tablet and above*/
+		gap:0em 2em;
+	}
+	.center-block {
+		width:50%;
+	}
+	.general-table {
+		margin:0;
+    	display:grid;
+    	grid-template-columns: minmax(40%, 11fr) repeat(auto-fit, minmax(15%, 1fr));
+    	justify-items: stetch;
+    	text-align:center;
+    	overflow-x:hidden;
+    }
+    .general-table .item:last-child {
+		background-color:#2A3944;
+		text-align:right;
+		padding:0.5em 0.75em;
+		margin:0.1em 0;
+	}
+
+	.ticket-search-form {
+		flex-direction:row;
+	}
+
+	/*homepage media queries*/
+	.home-icon {
+		transform:rotate(0deg);
+	}
+
+
+    /*hide/show elements*/
+    .hidePHONE { /*UNHIDE WHATS HIDDEN ON PHONE MODE*/
+		display:inline-block;
+	}
+		.hideTAB { /*HIDE ON TABLET VIEW ONLY*/
+		display:none;
+	}
+	.showPHONE { /*SHOW ON PHONE MODE ONLY*/
+		display:none;
+	}
+
+	.hideALL { /*HIDDEN ON ALL BUT PHONE*/
+		display:none;
+	}
+
+	/*here it becomes a real sidebar*/
+	#sidenavbar {
+		position:fixed;
+		height: 100%;
+		width: 75px;
+		top:0;
+		left:0;
+	}
+	.sidebar ul {
+		flex-direction: column; /*re-orientate the nav items for vertical side nav*/
+		justify-content: center;/*vertical center icons*/
+		align-items:center;
+	}
+	.sidebar ul li {
+		padding:1.5rem 0 1.5rem 0;/*correct padding for vertical */
+	}
+
+	/*top navbar adjustments for tablet and above*/
+	#topnavbar {
+		justify-content: flex-start;
+	}
+	.topnav {
+		align-self:flex-end;
+	}
+	.topnav ul {
+		flex-direction: row;
+	}
+	.topnav ul li:first-child {
+		padding-right:0.75rem;
+	}
+	.topnav ul li {
+		padding-left:0.75rem;
+		padding-right:0.75rem;
+	}
+	.topnav ul li:last-child {
+		padding-left:0.75rem;
+	}
+}
+
+
+@media only screen and (min-width: 1023px) {
+	:root {
+		font-size:14pt;/*adjust all font sizes*/
+	}
+	.topnav ul li:first-child {
+		padding-right:0.8rem;
+	}
+	.topnav ul li {
+		padding-left:0.8rem;
+		padding-right:0.8rem;
+	}
+	.topnav ul li:last-child {
+		padding-left:0.8rem;
+	}
+	.hidePHONE { /*UNHIDE WHATS HIDDEN ON PHONE MODE*/
+		display:inline-block;
+	}
+	.hideTAB { /*UNHIDE WHATS HIDDEN ON TABLET VIEW ONLY*/
+		display:inline-block;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	:root {
+		font-size:16pt;/*adjust all font sizes*/
+	}
+	.topnav ul li:first-child {
+		padding-right:1rem;
+	}
+	.topnav ul li {
+		padding-left:1rem;
+		padding-right:1rem;
+	}
+	.topnav ul li:last-child {
+		padding-left:1rem;
+	}
+}
